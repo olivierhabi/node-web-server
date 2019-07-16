@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 var app = express();
 
 
-hbs.registerPartials(__dirname + 'views/partials');
+hbs.registerPartials(__dirname + '/views/partials');
 app.set('view enginse', 'hbs');
 
 
@@ -47,6 +47,12 @@ app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page',
     currentYear: new Date().getFullYear()
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page'
   });
 });
 
