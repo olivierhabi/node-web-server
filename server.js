@@ -37,16 +37,14 @@ hbs.registerHelper('getCurrentYear', () => {
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageTitle: "Home Page",
-    welcomeText: "Welcome to Our site",
-    currentYear: new Date().getFullYear()
+    welcomeText: "Welcome to Our site"
   });
 });
 
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
-    pageTitle: 'About Page',
-    currentYear: new Date().getFullYear()
+    pageTitle: 'About Page'
   });
 });
 
