@@ -35,22 +35,57 @@ hbs.registerHelper('getCurrentYear', () => {
 
 
 app.get('/', (req, res) => {
-  res.render('home.hbs', {
-    pageTitle: "Home Page",
+  res.render('my_account.hbs', {
+    pageTitle: "My Account",
     welcomeText: "Welcome to Our site"
   });
 });
 
-
-app.get('/about', (req, res) => {
-  res.render('about.hbs', {
-    pageTitle: 'About Page'
+app.get('/profile', (req, res) => {
+  res.render('profile.hbs', {
+    pageTitle: 'My Profile'
   });
 });
 
-app.get('/projects', (req, res) => {
-  res.render('projects.hbs', {
-    pageTitle: 'Projects Page'
+app.get('/contacts', (req, res) => {
+  res.render('contacts.hbs', {
+    pageTitle: 'My Contacts'
+  });
+});
+
+app.get('/groups', (req, res) => {
+  res.render('groups.hbs', {
+    pageTitle: 'Mys Groups'
+  });
+});
+
+app.get('/orders', (req, res) => {
+  res.render('orders.hbs', {
+    pageTitle: 'My Orders'
+  });
+});
+
+app.get('/send', (req, res) => {
+  res.render('send.hbs', {
+    pageTitle: 'Send'
+  });
+});
+
+app.get('/custom', (req, res) => {
+  res.render('custom.hbs', {
+    pageTitle: 'Mys Groups'
+  });
+});
+
+app.get('/sent', (req, res) => {
+  res.render('sent.hbs', {
+    pageTitle: 'Sent'
+  });
+});
+
+app.get('/scheduled', (req, res) => {
+  res.render('scheduled.hbs', {
+    pageTitle: 'Scheduled'
   });
 });
 
